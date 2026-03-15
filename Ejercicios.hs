@@ -34,3 +34,13 @@ funcion3 h = \(b, c) -> h c b
 
 funcion3P :: ((b, c) -> a) -> (c -> (b -> a))
 funcion3P k = \c b -> k (b, c)
+
+--Ejercicio 4
+
+verif :: Eq b => ( a -> b ) -> a -> b -> Bool
+verif f x y = f x == y
+
+--Ejercicio 5
+
+calc :: Num b => ( a -> b ) -> b -> a -> b
+calc f y x = f x + y
